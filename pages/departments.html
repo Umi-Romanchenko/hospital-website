@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <meta name="description" content="Отделения Филиала №7 ГВКГ им. Н.Н. Бурденко. Стационар, поликлиника, реабилитация, диагностика.">
+  <title>Отделения — Филиал №7 ГВКГ им. Н.Н. Бурденко</title>
+  <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/accessibility.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/departments.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+
+<div class="accessibility-bar" id="accessibilityBar">
+  <span class="accessibility-label">Версия для слабовидящих:</span>
+  <button id="normalFont" class="access-btn active">Обычный</button>
+  <button id="largeFont" class="access-btn">Крупный</button>
+  <button id="xlFont" class="access-btn">Очень крупный</button>
+  <button id="contrastToggle" class="access-btn">Ч/Б контраст</button>
+  <button id="resetAccess" class="access-btn">Сброс</button>
+</div>
+
+<div class="header-nav-wrapper">
+  <header class="header">
+    <div class="logo-area">
+      <img src="../images/logo.png" alt="Логотип Министерства обороны" class="logo-img">
+      <div class="hospital-name">
+        <h1>Филиал №7 ГВКГ им. Н.Н. Бурденко</h1>
+        <p>Министерство обороны Российской Федерации</p>
+      </div>
+    </div>
+    <div class="hot-line-block">
+      <span>Экстренная госпитализация (приемное отделение)</span>
+      <a href="tel:+74951234567" class="phone-emergency">+7 (495) 123-45-67</a>
+      <span>Справочная служба</span>
+      <a href="tel:+74957654321" class="phone-info">+7 (495) 765-43-21</a>
+    </div>
+    <button class="burger-btn" id="burgerBtn" aria-label="Меню" type="button">
+      <span class="burger-line"></span>
+      <span class="burger-line"></span>
+      <span class="burger-line"></span>
+    </button>
+  </header>
+
+  <nav id="mainNav">
+    <ul class="nav-list">
+      <li><a href="../index.html" class="nav-link">Главная</a></li>
+      <li><a href="about.html" class="nav-link">О госпитале</a></li>
+      <li><a href="departments.html" class="nav-link active">Отделения</a></li>
+      <li><a href="patients.html" class="nav-link">Пациентам</a></li>
+      <li><a href="appointment.html" class="nav-link">Запись и сервисы</a></li>
+      <li><a href="documents.html" class="nav-link">Документы</a></li>
+      <li><a href="contacts.html" class="nav-link">Контакты</a></li>
+    </ul>
+  </nav>
+</div>
+
+<main>
+  <div class="grid-layout">
+    <div class="content">
+      
+      <div class="page-header">
+        <h2>Отделения</h2>
+        <p class="page-subtitle">Филиал №7 ГВКГ им. Н.Н. Бурденко оказывает специализированную, в том числе высокотехнологичную, медицинскую помощь в стационарных и амбулаторных условиях. Коечная мощность — 450 коек круглосуточного пребывания.</p>
+      </div>
+
+      <!-- Приёмное отделение (уже было) -->
+      <section class="card department-card" id="admission">
+        <div class="department-header">
+          <img src="../images/dept-admission.jpg" alt="Приёмное отделение" class="department-header-img">
+          <div class="department-title-block">
+            <h2>Приёмное отделение</h2>
+            <p class="department-subtitle">Экстренная и плановая госпитализация</p>
+          </div>
+        </div>
+        <div class="department-body">
+          <div class="department-info">
+            <div class="info-row"><span class="info-label">Заведующий отделением:</span><span class="info-value">Ковалёв Дмитрий Сергеевич, врач высшей категории</span></div>
+            <div class="info-row"><span class="info-label">Контактный телефон:</span><span class="info-value">+7 (495) 123-45-67 (круглосуточно)</span></div>
+            <div class="info-row"><span class="info-label">Режим работы:</span><span class="info-value">Круглосуточно, без выходных</span></div>
+          </div>
+          <div class="department-description">
+            <p>Приёмное отделение осуществляет круглосуточный приём пациентов по экстренным и неотложным показаниям, а также плановую госпитализацию по направлениям установленного образца. Отделение оснащено противошоковой палатой, перевязочной, кабинетом экспресс-диагностики. Время от момента поступления до начала лечебных мероприятий не превышает 30 минут.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Хирургическое отделение -->
+      <section class="card department-card" id="surgery">
+        <div class="department-header">
+          <img src="../images/dept-surgery.jpg" alt="Хирургическое отделение" class="department-header-img">
+          <div class="department-title-block">
+            <h2>Хирургическое отделение</h2>
+            <p class="department-subtitle">Включая гнойную хирургию</p>
+          </div>
+        </div>
+        <div class="department-body">
+          <div class="department-info">
+            <div class="info-row"><span class="info-label">Заведующий отделением:</span><span class="info-value">Громов Алексей Вадимович, доктор медицинских наук, профессор</span></div>
+            <div class="info-row"><span class="info-label">Контактный телефон:</span><span class="info-value">+7 (495) 765-43-30</span></div>
+            <div class="info-row"><span class="info-label">Режим работы:</span><span class="info-value">Стационар — круглосуточно. Консультации: пн–пт 09:00–15:00</span></div>
+          </div>
+          <div class="department-description">
+            <p>Хирургическое отделение выполняет полный спектр оперативных вмешательств на органах брюшной полости, грудной клетки, мягких тканях. Специализация отделения — лечение огнестрельных и минно-взрывных ранений, гнойно-септических осложнений, реконструктивные операции при послеоперационных вентральных грыжах. Ежегодно выполняется более 2000 операций.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Травматолого-ортопедическое отделение -->
+      <section class="card department-card" id="trauma">
+        <div class="department-header">
+          <img src="../images/dept-trauma-xray.jpg" alt="Травматология" class="department-header-img">
+          <div class="department-title-block">
+            <h2>Травматолого-ортопедическое отделение</h2>
+            <p class="department-subtitle">Эндопротезирование, остеосинтез, артроскопия</p>
+          </div>
+        </div>
+        <div class="department-body">
+          <div class="department-info">
+            <div class="info-row"><span class="info-label">Заведующий отделением:</span><span class="info-value">Петров Александр Владимирович, врач высшей категории</span></div>
+            <div class="info-row"><span class="info-label">Контактный телефон:</span><span class="info-value">+7 (495) 765-43-31</span></div>
+            <div class="info-row"><span class="info-label">Режим работы:</span><span class="info-value">Стационар — круглосуточно. Плановые консультации: пн–чт 09:00–16:00</span></div>
+          </div>
+          <div class="department-description">
+            <p>Отделение специализируется на лечении переломов костей любой сложности с применением современных методик накостного и внутрикостного остеосинтеза. Выполняется эндопротезирование тазобедренного, коленного, плечевого суставов. Особое направление — артроскопическая хирургия крупных суставов. 60 коек, две операционные с ламинарным потоком.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Нейрохирургическое отделение -->
+      <section class="card department-card" id="neuro">
+        <div class="department-header">
+          <img src="../images/dept-neuro-surgery.jpg" alt="Нейрохирургия" class="department-header-img">
+          <div class="department-title-block">
+            <h2>Нейрохирургическое отделение</h2>
+            <p class="department-subtitle">Операции на головном и спинном мозге, микрохирургия нервов</p>
+          </div>
+        </div>
+        <div class="department-body">
+          <div class="department-info">
+            <div class="info-row"><span class="info-label">Заведующий отделением:</span><span class="info-value">Козлов Дмитрий Евгеньевич, доктор медицинских наук, профессор</span></div>
+            <div class="info-row"><span class="info-label">Контактный телефон:</span><span class="info-value">+7 (495) 765-43-32</span></div>
+            <div class="info-row"><span class="info-label">Режим работы:</span><span class="info-value">Стационар — круглосуточно. Консультации: вт, чт 10:00–14:00</span></div>
+          </div>
+          <div class="department-description">
+            <p>Отделение оказывает помощь при черепно-мозговых травмах, травмах позвоночника и спинного мозга, опухолях нервной системы. Оснащено операционным микроскопом, нейронавигационной системой. Ежегодно выполняется более 800 операций.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Челюстно-лицевая хирургия -->
+      <section class="card department-card" id="maxillofacial">
+        <div class="department-header">
+          <img src="../images/dept-maxillo-3d.jpg" alt="Челюстно-лицевая хирургия" class="department-header-img">
+          <div class="department-title-block">
+            <h2>Отделение челюстно-лицевой хирургии</h2>
+            <p class="department-subtitle">Реконструктивные операции, дентальная имплантация</p>
+          </div>
+        </div>
+        <div class="department-body">
+          <div class="department-info">
+            <div class="info-row"><span class="info-label">Заведующий отделением:</span><span class="info-value">Григорьев Алексей Сергеевич, кандидат медицинских наук</span></div>
+            <div class="info-row"><span class="info-label">Контактный телефон:</span><span class="info-value">+7 (495) 765-43-33</span></div>
+            <div class="info-row"><span class="info-label">Режим работы:</span><span class="info-value">Стационар — круглосуточно. Консультации: пн–пт 09:00–14:00</span></div>
+          </div>
+          <div class="department-description">
+            <p>Отделение выполняет реконструктивно-восстановительные операции при травмах лица и челюстей, дефектах костей лицевого скелета. Проводится дентальная имплантация, костная пластика. Приоритетное направление — устранение последствий боевых травм челюстно-лицевой области.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Реабилитация -->
+      <section class="card department-card" id="rehab">
+        <div class="department-header">
+          <img src="../images/dept-rehab-stand.jpg" alt="Реабилитация" class="department-header-img">
+          <div class="department-title-block">
+            <h2>Отделение медицинской реабилитации и физиотерапии</h2>
+            <p class="department-subtitle">Восстановление после травм, протезирование, психологическая помощь</p>
+          </div>
+        </div>
+        <div class="department-body">
+          <div class="department-info">
+            <div class="info-row"><span class="info-label">Заведующий отделением:</span><span class="info-value">Фёдорова Татьяна Игоревна, врач высшей категории</span></div>
+            <div class="info-row"><span class="info-label">Контактный телефон:</span><span class="info-value">+7 (495) 765-43-34</span></div>
+            <div class="info-row"><span class="info-label">Режим работы:</span><span class="info-value">Пн–пт 08:00–20:00, сб 09:00–15:00</span></div>
+          </div>
+          <div class="department-description">
+            <p>Отделение реализует индивидуальные программы реабилитации после хирургических вмешательств, травм, протезирования. Включает зал ЛФК, механотерапию, физиотерапию, кабинет подбора протезов, психологическую помощь. Особое внимание — реабилитации после ампутаций конечностей.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Амбулаторно-поликлиническое отделение -->
+      <section class="card department-card" id="outpatient">
+        <div class="department-header">
+          <img src="../images/dept-outpatient.jpg" alt="Поликлиника" class="department-header-img">
+          <div class="department-title-block">
+            <h2>Амбулаторно-поликлиническое отделение</h2>
+            <p class="department-subtitle">Консультации специалистов, диспансеризация, профилактические осмотры</p>
+          </div>
+        </div>
+        <div class="department-body">
+          <div class="department-info">
+            <div class="info-row"><span class="info-label">Заведующий отделением:</span><span class="info-value">Соколова Марина Александровна, врач высшей категории</span></div>
+            <div class="info-row"><span class="info-label">Контактный телефон:</span><span class="info-value">+7 (495) 765-43-40 (регистратура)</span></div>
+            <div class="info-row"><span class="info-label">Режим работы:</span><span class="info-value">Пн–пт 08:00–20:00</span></div>
+          </div>
+          <div class="department-description">
+            <p>Приём по 18 врачебным специальностям. Диспансерное наблюдение военнослужащих, ветеранов, членов их семей. Запись через регистратуру или электронную форму на сайте.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Диагностические службы -->
+      <section class="card department-card" id="diagnostics">
+        <div class="department-header">
+          <img src="../images/dept-mri.jpg" alt="Диагностика" class="department-header-img">
+          <div class="department-title-block">
+            <h2>Диагностические службы</h2>
+            <p class="department-subtitle">Лаборатория, лучевая диагностика, функциональная диагностика</p>
+          </div>
+        </div>
+        <div class="department-body">
+          <div class="department-info">
+            <div class="info-row"><span class="info-label">Заведующий отделением лучевой диагностики:</span><span class="info-value">Кузьмин Игорь Олегович, кандидат медицинских наук</span></div>
+            <div class="info-row"><span class="info-label">Контактный телефон:</span><span class="info-value">+7 (495) 765-43-50</span></div>
+            <div class="info-row"><span class="info-label">Режим работы:</span><span class="info-value">Пн–пт 08:00–20:00, сб 09:00–15:00. Экстренные исследования — круглосуточно.</span></div>
+          </div>
+          <div class="department-description">
+            <p>Диагностическая база включает: МРТ 3 Тесла, мультиспиральный КТ 128 срезов, цифровую рентгенографию, УЗИ экспертного класса, клинико-биохимическую лабораторию полного цикла.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== НОВЫЕ ОТДЕЛЕНИЯ ===== -->
+
+      <!-- Терапевтическое отделение -->
+      <section class="card department-card" id="therapy">
+        <div class="department-header">
+          <img src="../images/dept-therapy.jpg" alt="Терапия" class="department-header-img">
+          <div class="department-title-block">
+            <h2>Терапевтическое отделение</h2>
+            <p class="department-subtitle">Лечение заболеваний внутренних органов</p>
+          </div>
+        </div>
+        <div class="department-body">
+          <div class="department-info">
+            <div class="info-row"><span class="info-label">Заведующий отделением:</span><span class="info-value">Смирнова Елена Александровна, врач высшей категории</span></div>
+            <div class="info-row"><span class="info-label">Контактный телефон:</span><span class="info-value">+7 (495) 765-43-35</span></div>
+            <div class="info-row"><span class="info-label">Режим работы:</span><span class="info-value">Стационар — круглосуточно. Консультации: пн–пт 09:00–15:00</span></div>
+          </div>
+          <div class="department-description">
+            <p>Терапевтическое отделение занимается диагностикой и лечением широкого спектра заболеваний внутренних органов: сердечно-сосудистой, дыхательной, пищеварительной, эндокринной систем. Проводятся комплексные профилактические осмотры и диспансеризация.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Кардиологическое отделение -->
+      <section class="card department-card" id="cardio">
+        <div class="department-header">
+          <img src="../images/dept-cardio.jpg" alt="Кардиология" class="department-header-img">
+          <div class="department-title-block">
+            <h2>Кардиологическое отделение</h2>
+            <p class="department-subtitle">Диагностика и лечение сердечно-сосудистых заболеваний</p>
+          </div>
+        </div>
+        <div class="department-body">
+          <div class="department-info">
+            <div class="info-row"><span class="info-label">Заведующий отделением:</span><span class="info-value">Орлов Владимир Петрович, врач высшей категории</span></div>
+            <div class="info-row"><span class="info-label">Контактный телефон:</span><span class="info-value">+7 (495) 765-43-36</span></div>
+            <div class="info-row"><span class="info-label">Режим работы:</span><span class="info-value">Стационар — круглосуточно. Консультации: вт, чт 09:00–14:00</span></div>
+          </div>
+          <div class="department-description">
+            <p>Кардиологическое отделение оснащено оборудованием для электрокардиографии, эхокардиографии, суточного мониторирования. Проводится терапия артериальной гипертензии, ишемической болезни сердца, нарушений ритма.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Отделение анестезиологии и реанимации -->
+      <section class="card department-card" id="anesthesiology">
+        <div class="department-header">
+          <img src="../images/dept-anesthesiology.jpg" alt="Анестезиология и реанимация" class="department-header-img">
+          <div class="department-title-block">
+            <h2>Отделение анестезиологии и реанимации</h2>
+            <p class="department-subtitle">Анестезиологическое обеспечение и интенсивная терапия</p>
+          </div>
+        </div>
+        <div class="department-body">
+          <div class="department-info">
+            <div class="info-row"><span class="info-label">Заведующий отделением:</span><span class="info-value">Логинов Игорь Васильевич, кандидат медицинских наук</span></div>
+            <div class="info-row"><span class="info-label">Контактный телефон:</span><span class="info-value">+7 (495) 765-43-37</span></div>
+            <div class="info-row"><span class="info-label">Режим работы:</span><span class="info-value">Круглосуточно</span></div>
+          </div>
+          <div class="department-description">
+            <p>Отделение обеспечивает анестезиологическое пособие при хирургических вмешательствах, проводит интенсивную терапию пациентов в критических состояниях. Оснащено современными наркозно-дыхательными аппаратами и системами мониторинга жизненных функций.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Отделение функциональной диагностики -->
+      <section class="card department-card" id="functional">
+        <div class="department-header">
+          <img src="../images/dept-functional.jpg" alt="Функциональная диагностика" class="department-header-img">
+          <div class="department-title-block">
+            <h2>Отделение функциональной диагностики</h2>
+            <p class="department-subtitle">Инструментальные исследования состояния органов и систем</p>
+          </div>
+        </div>
+        <div class="department-body">
+          <div class="department-info">
+            <div class="info-row"><span class="info-label">Заведующий отделением:</span><span class="info-value">Антонова Ирина Витальевна, врач высшей категории</span></div>
+            <div class="info-row"><span class="info-label">Контактный телефон:</span><span class="info-value">+7 (495) 765-43-51</span></div>
+            <div class="info-row"><span class="info-label">Режим работы:</span><span class="info-value">Пн–пт 08:00–17:00</span></div>
+          </div>
+          <div class="department-description">
+            <p>Выполняет электрокардиографию, суточное мониторирование ЭКГ и артериального давления, эхокардиографию, спирометрию, электроэнцефалографию и другие исследования, необходимые для постановки точного диагноза.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Клинико-диагностическая лаборатория -->
+      <section class="card department-card" id="lab">
+        <div class="department-header">
+          <img src="../images/dept-lab.jpg" alt="Лаборатория" class="department-header-img">
+          <div class="department-title-block">
+            <h2>Клинико-диагностическая лаборатория</h2>
+            <p class="department-subtitle">Полный спектр лабораторных анализов</p>
+          </div>
+        </div>
+        <div class="department-body">
+          <div class="department-info">
+            <div class="info-row"><span class="info-label">Заведующий лабораторией:</span><span class="info-value">Громова Людмила Викторовна, кандидат биологических наук</span></div>
+            <div class="info-row"><span class="info-label">Контактный телефон:</span><span class="info-value">+7 (495) 765-43-52</span></div>
+            <div class="info-row"><span class="info-label">Режим работы:</span><span class="info-value">Пн–пт 08:00–18:00, сб 09:00–13:00</span></div>
+          </div>
+          <div class="department-description">
+            <p>Лаборатория выполняет общеклинические, биохимические, иммунологические, микробиологические исследования. Оборудование экспертного класса позволяет получать результаты с высокой точностью в кратчайшие сроки.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Отделение переливания крови -->
+      <section class="card department-card" id="blood">
+        <div class="department-header">
+          <img src="../images/dept-blood.jpg" alt="Переливание крови" class="department-header-img">
+          <div class="department-title-block">
+            <h2>Отделение переливания крови</h2>
+            <p class="department-subtitle">Трансфузионная терапия</p>
+          </div>
+        </div>
+        <div class="department-body">
+          <div class="department-info">
+            <div class="info-row"><span class="info-label">Заведующий отделением:</span><span class="info-value">Власов Олег Борисович, врач высшей категории</span></div>
+            <div class="info-row"><span class="info-label">Контактный телефон:</span><span class="info-value">+7 (495) 765-43-53</span></div>
+            <div class="info-row"><span class="info-label">Режим работы:</span><span class="info-value">Круглосуточно</span></div>
+          </div>
+          <div class="department-description">
+            <p>Обеспечивает хранение и выдачу компонентов крови, проведение плазмафереза и других методов трансфузионной терапии. Строго соблюдаются все меры безопасности и контроля качества.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Патологоанатомическое отделение -->
+      <section class="card department-card" id="pathology">
+        <div class="department-header">
+          <img src="../images/dept-pathology.jpg" alt="Патологоанатомическое отделение" class="department-header-img">
+          <div class="department-title-block">
+            <h2>Патологоанатомическое отделение</h2>
+            <p class="department-subtitle">Прижизненная и посмертная диагностика</p>
+          </div>
+        </div>
+        <div class="department-body">
+          <div class="department-info">
+            <div class="info-row"><span class="info-label">Заведующий отделением:</span><span class="info-value">Корнеев Антон Павлович, кандидат медицинских наук</span></div>
+            <div class="info-row"><span class="info-label">Контактный телефон:</span><span class="info-value">+7 (495) 765-43-54</span></div>
+            <div class="info-row"><span class="info-label">Режим работы:</span><span class="info-value">Пн–пт 08:00–16:00</span></div>
+          </div>
+          <div class="department-description">
+            <p>Проводит гистологические исследования операционного и биопсийного материала, аутопсийную диагностику. Результаты используются для контроля качества лечебной работы и уточнения диагнозов.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Аптека -->
+      <section class="card department-card" id="pharmacy">
+        <div class="department-header">
+          <img src="../images/dept-pharmacy.jpg" alt="Аптека" class="department-header-img">
+          <div class="department-title-block">
+            <h2>Аптека</h2>
+            <p class="department-subtitle">Обеспечение лекарственными препаратами и медицинскими изделиями</p>
+          </div>
+        </div>
+        <div class="department-body">
+          <div class="department-info">
+            <div class="info-row"><span class="info-label">Заведующий аптекой:</span><span class="info-value">Круглова Ольга Сергеевна, провизор высшей категории</span></div>
+            <div class="info-row"><span class="info-label">Контактный телефон:</span><span class="info-value">+7 (495) 765-43-55</span></div>
+            <div class="info-row"><span class="info-label">Режим работы:</span><span class="info-value">Пн–пт 08:00–18:00</span></div>
+          </div>
+          <div class="department-description">
+            <p>Аптека осуществляет закупку, хранение и отпуск лекарственных средств и расходных материалов для всех подразделений госпиталя. Контролирует соблюдение правил хранения и сроков годности.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Отделение медицинской статистики -->
+      <section class="card department-card" id="statistics">
+        <div class="department-header">
+          <img src="../images/dept-statistics.jpg" alt="Медицинская статистика" class="department-header-img">
+          <div class="department-title-block">
+            <h2>Отделение медицинской статистики</h2>
+            <p class="department-subtitle">Сбор и обработка медицинских данных</p>
+          </div>
+        </div>
+        <div class="department-body">
+          <div class="department-info">
+            <div class="info-row"><span class="info-label">Заведующий отделением:</span><span class="info-value">Дмитриева Анна Игоревна, врач-статистик</span></div>
+            <div class="info-row"><span class="info-label">Контактный телефон:</span><span class="info-value">+7 (495) 765-43-56</span></div>
+            <div class="info-row"><span class="info-label">Режим работы:</span><span class="info-value">Пн–пт 08:00–16:30</span></div>
+          </div>
+          <div class="department-description">
+            <p>Обеспечивает учёт и отчётность медицинской деятельности, анализ заболеваемости, подготовку статистических форм. Информация используется для планирования и улучшения качества медицинской помощи.</p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <aside class="sidebar">
+      <div class="card">
+        <h3>Приёмное отделение</h3>
+        <p class="sidebar-emergency">Круглосуточно, без выходных</p>
+        <p>Телефон: +7 (495) 123-45-67</p>
+      </div>
+      <div class="card">
+        <h3>Регистратура поликлиники</h3>
+        <p>Телефон: +7 (495) 765-43-40</p>
+        <p>Часы работы: пн–пт 08:00–20:00</p>
+        <a href="appointment.html#appointmentForm" class="btn btn-primary" style="margin-top:0.8rem;">Записаться на приём онлайн</a>
+      </div>
+      <div class="card">
+        <h3>Отделения на карте</h3>
+        <img src="../images/sidebar-corps-map.jpg" alt="Схема расположения корпусов" class="sidebar-image">
+        <p class="sidebar-address">Адрес: Госпитальная пл., д. 3<br>Парковка для посетителей — КПП №2</p>
+      </div>
+      <div class="card">
+        <h3>Психологическая помощь</h3>
+        <p>Конфиденциально. Помощь при ПТСР.</p>
+        <p>Кабинет 404, тел. доб. 1234</p>
+      </div>
+    </aside>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <p>© 2026 Филиал №7 ФГКУ «ГВКГ им. Н.Н. Бурденко» Минобороны России</p>
+      <p>Юридический адрес: 105229, г. Москва, Госпитальная пл., д. 3</p>
+      <p>ИНН 7718012345 / КПП 771801001 / ОГРН 1037718001234</p>
+    </div>
+    <div>
+      <p><a href="documents.html#privacy">Политика обработки персональных данных (152-ФЗ)</a></p>
+      <p><a href="documents.html#appeals">Порядок рассмотрения обращений граждан (59-ФЗ)</a></p>
+      <p><a href="https://mil.ru/anti-corruption.htm" target="_blank" rel="noopener">Противодействие коррупции</a></p>
+    </div>
+    <div>
+      <p><a href="https://www.gosuslugi.ru" target="_blank" rel="noopener">Портал Госуслуг</a></p>
+      <p><a href="https://mil.ru" target="_blank" rel="noopener">Министерство обороны РФ</a></p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>Информация на сайте не является публичной офертой. По всем вопросам диагностики и лечения необходима консультация специалиста.</p>
+    <p>Сайт соответствует ГОСТ Р 52872-2019 (доступность для инвалидов по зрению)</p>
+  </div>
+</footer>
+
+<script src="../js/accessibility.js"></script>
+<script src="../js/burger-menu.js"></script>
+</body>
+</html>

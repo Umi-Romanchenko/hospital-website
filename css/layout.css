@@ -1,0 +1,225 @@
+/* ========== ОБЁРТКА (display: contents на десктопе) ========== */
+.header-nav-wrapper {
+  display: contents;
+}
+
+/* ========== ШАПКА ========== */
+.header {
+  background: var(--bg-white);
+  border-bottom: 3px solid var(--primary-navy);
+  padding: 1.5rem 2rem;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo-img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.hospital-name h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary-navy);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.hospital-name p {
+  font-size: 0.9rem;
+  color: var(--secondary-gray);
+  margin-top: 0.2rem;
+}
+
+.hot-line-block {
+  text-align: right;
+  border-left: 2px solid var(--border-light);
+  padding-left: 2rem;
+  white-space: nowrap;
+}
+
+.phone-emergency {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--alert-red);
+  text-decoration: none;
+}
+
+.phone-info {
+  font-size: 1rem;
+  color: var(--primary-navy);
+  text-decoration: none;
+}
+
+.hot-line-block span {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--secondary-gray);
+}
+
+/* ========== БУРГЕР ========== */
+.burger-btn {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  background: var(--primary-navy);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  z-index: 110;
+  margin-left: auto;
+}
+
+.burger-line {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: white;
+  margin: 3px 0;
+  transition: 0.3s;
+}
+
+.burger-btn.active .burger-line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.burger-btn.active .burger-line:nth-child(2) {
+  opacity: 0;
+}
+.burger-btn.active .burger-line:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* ========== НАВИГАЦИЯ ========== */
+nav {
+  background: var(--primary-navy);
+  border-bottom: 3px solid #CBD5E0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  overflow-x: auto;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 0.8rem 1.2rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  border-bottom: 3px solid transparent;
+  transition: 0.2s;
+  white-space: nowrap;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  border-bottom: 3px solid #CBD5E0;
+  background: rgba(255,255,255,0.05);
+}
+
+/* ========== САЙДБАР ========== */
+.sidebar .card {
+  padding: 1.2rem;
+}
+
+/* Убираем верхний отступ у всех заголовков в сайдбаре */
+.sidebar .card h3 {
+  margin-top: 0;
+}
+
+.sidebar-image {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  background: #E8ECF2;
+  margin-bottom: 0.8rem;
+}
+
+.sidebar-emergency {
+  font-weight: 700;
+  color: var(--alert-red);
+  font-size: 0.95rem;
+}
+
+.sidebar-note {
+  font-size: 0.8rem;
+  color: var(--secondary-gray);
+}
+
+.sidebar-address {
+  font-size: 0.85rem;
+  color: var(--text-medium);
+}
+
+/* ========== ПОДВАЛ ========== */
+footer {
+  background: var(--primary-navy);
+  color: #CBD5E0;
+  padding: 2rem;
+  font-size: 0.85rem;
+  margin-top: 3rem;
+  border-top: 5px solid #CBD5E0;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+footer p {
+  font-size: 0.85rem;
+  color: #CBD5E0;
+  margin-bottom: 0.3rem;
+}
+
+footer a {
+  color: #CBD5E0;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  margin-top: 2rem;
+  text-align: center;
+  border-top: 1px solid #4A5568;
+  padding-top: 1.5rem;
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer-bottom p {
+  font-size: 0.8rem;
+  color: #A0AEC0;
+}

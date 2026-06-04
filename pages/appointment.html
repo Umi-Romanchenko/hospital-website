@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <meta name="description" content="Запись на приём и электронные сервисы Филиала №7 ГВКГ им. Н.Н. Бурденко.">
+  <title>Запись и сервисы — Филиал №7 ГВКГ им. Н.Н. Бурденко</title>
+  <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/accessibility.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/appointment.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+
+<div class="accessibility-bar" id="accessibilityBar">
+  <span class="accessibility-label">Версия для слабовидящих:</span>
+  <button id="normalFont" class="access-btn active">Обычный</button>
+  <button id="largeFont" class="access-btn">Крупный</button>
+  <button id="xlFont" class="access-btn">Очень крупный</button>
+  <button id="contrastToggle" class="access-btn">Ч/Б контраст</button>
+  <button id="resetAccess" class="access-btn">Сброс</button>
+</div>
+
+<div class="header-nav-wrapper">
+  <header class="header">
+    <div class="logo-area">
+      <img src="../images/logo.png" alt="Логотип" class="logo-img">
+      <div class="hospital-name">
+        <h1>Филиал №7 ГВКГ им. Н.Н. Бурденко</h1>
+        <p>Министерство обороны Российской Федерации</p>
+      </div>
+    </div>
+    <div class="hot-line-block">
+      <span>Экстренная госпитализация</span>
+      <a href="tel:+74951234567" class="phone-emergency">+7 (495) 123-45-67</a>
+      <span>Справочная служба</span>
+      <a href="tel:+74957654321" class="phone-info">+7 (495) 765-43-21</a>
+    </div>
+    <button class="burger-btn" id="burgerBtn" aria-label="Меню" type="button">
+      <span class="burger-line"></span>
+      <span class="burger-line"></span>
+      <span class="burger-line"></span>
+    </button>
+  </header>
+
+  <nav id="mainNav">
+    <ul class="nav-list">
+      <li><a href="../index.html" class="nav-link">Главная</a></li>
+      <li><a href="about.html" class="nav-link">О госпитале</a></li>
+      <li><a href="departments.html" class="nav-link">Отделения</a></li>
+      <li><a href="patients.html" class="nav-link">Пациентам</a></li>
+      <li><a href="appointment.html" class="nav-link active">Запись и сервисы</a></li>
+      <li><a href="documents.html" class="nav-link">Документы</a></li>
+      <li><a href="contacts.html" class="nav-link">Контакты</a></li>
+    </ul>
+  </nav>
+</div>
+
+<main>
+  <div class="grid-layout">
+    <div class="content">
+      
+      <div class="page-header">
+        <h2>Запись на приём и электронные сервисы</h2>
+        <p class="page-subtitle">Электронная регистратура, личный кабинет пациента через портал Госуслуг.</p>
+      </div>
+
+      <!-- сервисы (без изменений) -->
+      <section class="card">
+        <h2>Электронные сервисы</h2>
+        <div class="services-grid">
+          <a href="#appointmentForm" class="service-card">
+            <img src="../images/service-registry.jpg" alt="Электронная регистратура" class="service-image">
+            <div class="service-content">
+              <h3>Электронная регистратура</h3>
+              <p>Запись на приём к специалистам через интернет. Выбор врача, даты и времени.</p>
+              <span class="service-link">Перейти к записи</span>
+            </div>
+          </a>
+          <a href="https://www.gosuslugi.ru" target="_blank" rel="noopener" class="service-card">
+            <img src="../images/service-gosuslugi.jpg" alt="Госуслуги" class="service-image">
+            <div class="service-content">
+              <h3>Личный кабинет (ЕСИА)</h3>
+              <p>Доступ к медицинской документации через портал Госуслуг.</p>
+              <span class="service-link">Войти через Госуслуги</span>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <!-- ФОРМА ЗАПИСИ -->
+      <section class="card" id="appointmentForm">
+        <h2>Запись на приём к специалисту</h2>
+        <p class="form-subtitle">Шаг <span id="stepIndicator">1</span> из 3. Все поля со звёздочкой (*) обязательны.</p>
+        
+        <div class="wizard-step active" id="step1">
+          <div class="form-row">
+            <div class="form-group"><label for="fullName">ФИО *</label><input type="text" id="fullName" placeholder="Иванов Иван Иванович"><div class="error-msg" id="fullNameError"></div></div>
+            <div class="form-group"><label for="birthDate">Дата рождения *</label><input type="date" id="birthDate"><div class="error-msg" id="birthDateError"></div></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label for="gender">Пол *</label><select id="gender"><option value="">— Выберите —</option><option value="male">Мужской</option><option value="female">Женский</option></select><div class="error-msg" id="genderError"></div></div>
+            <div class="form-group"><label for="patientStatus">Категория *</label><select id="patientStatus"><option value="">— Статус —</option><option value="conscript">Военнослужащий по призыву</option><option value="contract">Контрактник</option><option value="veteran">Ветеран боевых действий</option><option value="family">Член семьи</option><option value="civilian_mo">Гражданский персонал</option><option value="civilian_oms">Гражданин (ОМС/ДМС/платно)</option></select><div class="error-msg" id="patientStatusError"></div></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label for="docType">Документ *</label><select id="docType"><option value="">— Тип —</option><option value="passport">Паспорт РФ</option><option value="military_id">Военный билет</option><option value="officer_id">Удостоверение</option></select><div class="error-msg" id="docTypeError"></div></div>
+            <div class="form-group"><label for="docNumber">Серия и номер *</label><input type="text" id="docNumber" placeholder="0000 000000"><div class="error-msg" id="docNumberError"></div></div>
+          </div>
+          <div class="btn-group"><button type="button" class="btn btn-primary" onclick="nextStep(2)">Далее: выбор врача</button></div>
+        </div>
+
+        <div class="wizard-step" id="step2">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="department">Подразделение</label>
+              <select id="department">
+                <option value="">— Выберите подразделение —</option>
+                <option value="trauma">Травматология и ортопедия</option>
+                <option value="neuro">Нейрохирургия</option>
+                <option value="therapy">Терапия</option>
+                <option value="cardio">Кардиология</option>
+                <option value="maxillofacial">Челюстно-лицевая хирургия</option>
+                <option value="rehab">Реабилитация</option>
+                <option value="surgery">Хирургия</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="specialty">Специальность врача</label>
+              <select id="specialty">
+                <option value="">— Выберите специальность —</option>
+                <option value="traumatologist">Травматолог-ортопед</option>
+                <option value="neurosurgeon">Нейрохирург</option>
+                <option value="therapist">Терапевт</option>
+                <option value="cardiologist">Кардиолог</option>
+                <option value="maxillofacial">Челюстно-лицевой хирург</option>
+                <option value="rehabilitologist">Врач-реабилитолог</option>
+                <option value="surgeon">Хирург</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="preferredTime">Удобное время приёма</label>
+            <select id="preferredTime">
+              <option value="">— Без предпочтений —</option>
+              <option value="morning">Утро (08:00 – 12:00)</option>
+              <option value="afternoon">День (12:00 – 16:00)</option>
+              <option value="evening">Вечер (16:00 – 20:00)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="referralFile">Направление (форма 057/у-04)</label>
+            <input type="file" id="referralFile" accept=".pdf,.jpg,.jpeg,.png">
+            <small>Допустимые форматы: PDF, JPG, PNG. Максимальный размер файла — 5 МБ.</small>
+            <div class="error-msg" id="referralFileError"></div>
+          </div>
+          <div class="btn-group">
+            <button type="button" class="btn btn-outline" onclick="prevStep(1)">Назад</button>
+            <button type="button" class="btn btn-primary" onclick="nextStep(3)">Далее: Контактные данные</button>
+          </div>
+        </div>
+
+        <div class="wizard-step" id="step3">
+          <div class="form-row">
+            <div class="form-group"><label for="phone">Телефон *</label><input type="tel" id="phone" placeholder="+7 (900) 000-00-00"><div class="error-msg" id="phoneError"></div></div>
+            <div class="form-group"><label for="email">Эл. почта</label><input type="email" id="email" placeholder="example@mail.ru"><div class="error-msg" id="emailError"></div></div>
+          </div>
+          <div class="form-group">
+            <button type="button" class="btn btn-outline btn-sms" onclick="sendSmsCode()">Отправить код подтверждения</button>
+            <input type="text" id="smsCode" placeholder="Код из SMS" class="sms-input" disabled>
+            <div class="error-msg" id="smsCodeError"></div>
+          </div>
+          <div class="agreement-block">
+            <label class="custom-checkbox"><input type="checkbox" id="consentPd"><span class="checkmark"><svg viewBox="0 0 14 14" width="14" height="14"><polyline points="2 7 5.5 11 12 3" fill="none" stroke="white" stroke-width="2"/></svg></span><span class="checkbox-text">Согласие на обработку ПД (152-ФЗ) *</span></label>
+            <label class="custom-checkbox"><input type="checkbox" id="consentRules"><span class="checkmark"><svg viewBox="0 0 14 14" width="14" height="14"><polyline points="2 7 5.5 11 12 3" fill="none" stroke="white" stroke-width="2"/></svg></span><span class="checkbox-text">С правилами ознакомлен(а) *</span></label>
+            <label class="custom-checkbox"><input type="checkbox" id="consentTrue"><span class="checkmark"><svg viewBox="0 0 14 14" width="14" height="14"><polyline points="2 7 5.5 11 12 3" fill="none" stroke="white" stroke-width="2"/></svg></span><span class="checkbox-text">Данные верны, я предупреждён(а) об ответственности *</span></label>
+          </div>
+          <div class="btn-group">
+            <button type="button" class="btn btn-outline" onclick="prevStep(2)">Назад</button>
+            <button type="button" class="btn btn-red" onclick="submitAppointment()">Записаться на приём</button>
+          </div>
+        </div>
+        <div id="appointmentResult" class="form-result"></div>
+      </section>
+
+      <!-- шаги (без изменений) -->
+      <section class="card">
+        <h2>Порядок записи</h2>
+        <div class="steps-horizontal">
+          <div class="step-item"><div class="step-number">1</div><h3>Заполнение</h3><p>Укажите личные данные и категорию.</p></div>
+          <div class="step-item"><div class="step-number">2</div><h3>SMS‑код</h3><p>Подтвердите номер телефона.</p></div>
+          <div class="step-item"><div class="step-number">3</div><h3>Обработка</h3><p>Оператор уточнит детали в течение 2 часов.</p></div>
+          <div class="step-item"><div class="step-number">4</div><h3>Подтверждение</h3><p>Вы получите талон с датой и временем.</p></div>
+        </div>
+      </section>
+
+    </div>
+
+    <aside class="sidebar">
+      <div class="card">
+        <h3>Телефон регистратуры</h3>
+        <p class="sidebar-emergency">+7 (495) 765-43-40</p>
+        <p>пн–пт 08:00–20:00</p>
+      </div>
+      <div class="card">
+        <h3>Справочная</h3>
+        <p>+7 (495) 765-43-21</p>
+        <p>пн–пт 08:00–20:00</p>
+      </div>
+      <div class="card">
+        <h3>Личный кабинет</h3>
+        <p>Вход через Госуслуги</p>
+        <a href="https://www.gosuslugi.ru" target="_blank" rel="noopener" class="btn btn-primary" style="margin-top:0.5rem;">Войти</a>
+      </div>
+    </aside>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <p>© 2026 Филиал №7 ФГКУ «ГВКГ им. Н.Н. Бурденко»</p>
+      <p>105229, Москва, Госпитальная пл., 3</p>
+      <p>ИНН 7718012345 / КПП 771801001</p>
+    </div>
+    <div>
+      <p><a href="documents.html#privacy">Политика обработки ПД</a></p>
+      <p><a href="documents.html#appeals">Порядок обращений</a></p>
+      <p><a href="https://mil.ru/anti-corruption.htm">Противодействие коррупции</a></p>
+    </div>
+    <div>
+      <p><a href="https://www.gosuslugi.ru" target="_blank">Госуслуги</a></p>
+      <p><a href="https://mil.ru" target="_blank">Министерство обороны</a></p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>Не является публичной офертой. Сайт соответствует ГОСТ Р 52872-2019.</p>
+  </div>
+</footer>
+
+<script src="../js/accessibility.js"></script>
+<script src="../js/form-wizard.js"></script>
+<script src="../js/form-validation.js"></script>
+<script src="../js/burger-menu.js"></script>
+</body>
+</html>

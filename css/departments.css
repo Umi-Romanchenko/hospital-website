@@ -1,0 +1,127 @@
+/* departments.css — стили страницы "Отделения" с адаптивом */
+
+/* Защита от выхода за экран */
+.content,
+.card,
+.department-card,
+.department-header,
+.department-body {
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.department-card {
+  padding: 0;
+  overflow: hidden;
+}
+
+.department-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+}
+
+.department-header-img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  background: #E8ECF2;
+  display: block;
+  border-right: 1px solid var(--border-light);
+}
+
+.department-title-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+  background: #FAFBFC;
+}
+
+.department-title-block h2 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.3rem;
+  border-bottom: none;
+}
+
+.department-subtitle {
+  font-size: 0.95rem;
+  color: var(--secondary-gray);
+}
+
+.department-body {
+  padding: 1.8rem;
+  border-top: 1px solid var(--border-light);
+}
+
+.department-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 0.8rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.info-row {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--secondary-gray);
+  text-transform: uppercase;
+}
+
+.info-value {
+  font-size: 0.95rem;
+}
+
+.department-description p,
+.department-description li {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: 0.5rem;
+}
+
+/* Адаптивные высоты для изображений отделений */
+@media (max-width: 992px) {
+  .department-header {
+    grid-template-columns: 1fr;
+  }
+  .department-header-img {
+    height: 220px;
+    border-right: none;
+    border-bottom: 1px solid var(--border-light);
+  }
+}
+
+@media (max-width: 768px) {
+  .department-header-img {
+    height: 200px;
+  }
+  .department-title-block {
+    padding: 1.2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .department-header-img {
+    height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .department-header-img {
+    height: 160px;
+  }
+}
+
+@media (max-width: 320px) {
+  .department-header-img {
+    height: 140px;
+  }
+}

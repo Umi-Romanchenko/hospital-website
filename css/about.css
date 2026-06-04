@@ -1,0 +1,330 @@
+/* about.css — стили страницы "О госпитале" */
+
+/* ===== ЗАЩИТА ОТ ВЫХОДА ЗА ЭКРАН ===== */
+.content,
+.card,
+.about-section,
+.management-grid,
+.manager-card,
+.structure-grid,
+.structure-block,
+.anti-corruption-contacts,
+.table-wrapper,
+.vacancy-table {
+  max-width: 100% !important;
+  overflow: hidden !important;
+  box-sizing: border-box;
+  min-width: 0;
+}
+
+.content *,
+.content *::before,
+.content *::after {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+/* ===== ОСНОВНЫЕ СТИЛИ ===== */
+.about-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.about-img {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: contain;
+  background: #E8ECF2;
+  display: block;
+  max-width: 100%;
+}
+
+.about-text p {
+  font-size: 0.95rem;
+  color: var(--text-dark);
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  word-wrap: break-word;
+}
+
+.about-text p:last-child {
+  margin-bottom: 0;
+}
+
+/* Руководство */
+.management-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.manager-card {
+  display: flex;
+  gap: 2rem;
+  border: 1px solid var(--border-light);
+  padding: 1.5rem;
+  background: #FAFBFC;
+  align-items: flex-start;
+}
+
+.manager-photo {
+  width: 160px;
+  height: auto;
+  max-height: 200px;
+  object-fit: contain;
+  background: #E8ECF2;
+  flex-shrink: 0;
+  max-width: 100%;
+}
+
+.manager-info {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.manager-info h3 {
+  margin: 0 0 0.3rem 0;
+  font-size: 1.15rem;
+  color: var(--primary-navy);
+  word-wrap: break-word;
+}
+
+.manager-position {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 0.3rem;
+}
+
+.manager-rank,
+.manager-degree,
+.manager-specialty,
+.manager-phone,
+.manager-hours {
+  font-size: 0.9rem;
+  color: var(--secondary-gray);
+  margin-bottom: 0.2rem;
+}
+
+/* Структура */
+.structure-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.structure-block {
+  border: 1px solid var(--border-light);
+  padding: 1.5rem;
+  background: #FAFBFC;
+}
+
+.structure-block h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1rem;
+  border-bottom: 1px solid var(--border-light);
+  padding-bottom: 0.5rem;
+}
+
+.structure-block ul {
+  list-style: none;
+  padding: 0;
+}
+
+.structure-block ul li {
+  font-size: 0.9rem;
+  padding: 0.35rem 0;
+  border-bottom: 1px dotted var(--border-light);
+  word-wrap: break-word;
+}
+
+/* Ссылки в структуре — анимация как на главной */
+.structure-block ul li a {
+  text-decoration: none;
+  color: var(--primary-navy);
+  font-weight: 500;
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  margin: -0.3rem -0.8rem;         /* компенсация, чтобы не ломать поток */
+  border-left: 3px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.structure-block ul li a:hover {
+  color: #0d1b2a;
+  background: #F0F4FA;
+  border-left-color: var(--primary-navy);
+  padding-left: 1.2rem;
+}
+
+/* Вакансии */
+.vacancy-intro {
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  max-width: 100%;
+}
+
+.vacancy-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.vacancy-table thead {
+  background: var(--primary-navy);
+  color: white;
+}
+
+.vacancy-table th,
+.vacancy-table td {
+  padding: 0.8rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.vacancy-contact {
+  font-size: 0.85rem;
+  color: var(--secondary-gray);
+  font-style: italic;
+  margin-top: 0.8rem;
+}
+
+/* Антикоррупция */
+.anti-corruption-contacts {
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  border: 1px solid var(--border-light);
+  background: #FAFBFC;
+}
+
+.anti-corruption-contacts h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1rem;
+  color: var(--primary-navy);
+}
+
+.anti-corruption-contacts ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem 0;
+}
+
+.anti-corruption-contacts ul li {
+  font-size: 0.9rem;
+  color: var(--text-medium);
+  padding: 0.3rem 0;
+  word-wrap: break-word;
+}
+
+/* ===== АДАПТИВ (увеличенные фото) ===== */
+@media (max-width: 1200px) {
+  .about-section { gap: 1.5rem; }
+  .about-img { max-height: 350px; }
+  .manager-photo { width: 140px; }
+  .structure-grid { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+}
+
+@media (max-width: 992px) {
+  .about-section {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+  .about-img { max-height: 300px; }
+  .manager-card {
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1.2rem;
+  }
+  .manager-photo {
+    width: 120px;
+    max-height: 160px;
+    margin-right: auto;
+  }
+  .manager-info { flex: 1 1 auto; }
+  .manager-info h3 { font-size: 1.05rem; }
+  .manager-position { font-size: 0.9rem; }
+  .manager-rank,
+  .manager-degree,
+  .manager-specialty,
+  .manager-phone,
+  .manager-hours { font-size: 0.85rem; }
+  .structure-grid { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+}
+
+@media (max-width: 768px) {
+  .about-img { max-height: 260px; }
+  .about-text p { font-size: 0.9rem; }
+  .manager-card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+  .manager-photo {
+    width: 140px;
+    max-height: 180px;
+    margin: 0;
+  }
+  .manager-info h3 { font-size: 1rem; }
+  .structure-grid { grid-template-columns: 1fr; }
+  .vacancy-table th,
+  .vacancy-table td { padding: 0.6rem 0.7rem; font-size: 0.85rem; }
+}
+
+@media (max-width: 576px) {
+  .about-img { max-height: 220px; }
+  .manager-photo {
+    width: 130px;
+    max-height: 170px;
+  }
+  .manager-info h3 { font-size: 0.95rem; }
+  .manager-position { font-size: 0.85rem; }
+  .manager-rank,
+  .manager-degree,
+  .manager-specialty,
+  .manager-phone,
+  .manager-hours { font-size: 0.8rem; }
+  .about-text p { font-size: 0.85rem; }
+}
+
+@media (max-width: 480px) {
+  .about-img { max-height: 180px; }
+  .manager-photo {
+    width: 120px;
+    max-height: 160px;
+  }
+  .manager-info h3 { font-size: 0.9rem; }
+  .manager-position { font-size: 0.8rem; }
+  .manager-rank,
+  .manager-degree,
+  .manager-specialty,
+  .manager-phone,
+  .manager-hours { font-size: 0.75rem; }
+  .vacancy-table th,
+  .vacancy-table td { padding: 0.4rem 0.5rem; font-size: 0.75rem; }
+  .anti-corruption-contacts { padding: 1rem; }
+}
+
+@media (max-width: 320px) {
+  .about-img { max-height: 150px; }
+  .manager-photo {
+    width: 100px;
+    max-height: 140px;
+  }
+  .manager-info h3 { font-size: 0.85rem; }
+  .manager-position { font-size: 0.75rem; }
+  .manager-rank,
+  .manager-degree,
+  .manager-specialty,
+  .manager-phone,
+  .manager-hours { font-size: 0.7rem; }
+  .about-text p { font-size: 0.8rem; }
+  .structure-block { padding: 0.8rem; }
+}

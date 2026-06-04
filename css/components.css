@@ -1,0 +1,311 @@
+/* КАРТОЧКИ */
+.card {
+  background: var(--bg-white);
+  border: 1px solid var(--border-light);
+  padding: 1.8rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow-sm);
+}
+
+/* ЗАГОЛОВОК СТРАНИЦЫ */
+.page-header {
+  margin-bottom: 2rem;
+}
+
+.page-header h2 {
+  font-size: 1.6rem;
+  color: var(--primary-navy);
+  border-bottom: 1px solid var(--border-light);
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+}
+
+.page-subtitle {
+  font-size: 0.95rem;
+  color: var(--secondary-gray);
+  line-height: 1.5;
+}
+
+/* КНОПКИ */
+.btn {
+  display: inline-block;
+  padding: 0.7rem 1.5rem;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-radius: 3px;
+  text-align: center;
+  border: 1px solid transparent;
+  cursor: pointer;
+  font-family: var(--font-base);
+  transition: opacity 0.2s;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.btn-primary {
+  background: var(--primary-navy);
+  color: white;
+  border-color: var(--primary-navy);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--primary-navy);
+  border: 1px solid var(--primary-navy);
+}
+
+.btn-red {
+  background: var(--alert-red);
+  color: white;
+}
+
+.btn-sm {
+  padding: 0.4rem 1rem;
+  font-size: 0.8rem;
+}
+
+/* ЗАГЛУШКИ КАРТИНОК */
+.img-placeholder {
+  background: #E2E8F0;
+  border: 1px solid #CBD5E0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #718096;
+  font-size: 0.85rem;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.img-placeholder span {
+  position: absolute;
+  bottom: 6px;
+  right: 10px;
+  font-size: 0.65rem;
+  color: #A0AEC0;
+  background: rgba(255,255,255,0.7);
+  padding: 2px 6px;
+  border-radius: 2px;
+}
+
+/* ФОРМА */
+.form-subtitle {
+  margin-bottom: 1rem;
+  color: var(--secondary-gray);
+  font-size: 1rem;
+}
+
+.wizard-step {
+  display: none;
+}
+
+.wizard-step.active {
+  display: block;
+}
+
+.form-group {
+  margin-bottom: 1.2rem;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 0.3rem;
+  color: var(--text-medium);
+}
+
+input[type="text"],
+input[type="date"],
+input[type="tel"],
+input[type="email"],
+select,
+textarea {
+  width: 100%;
+  padding: 0.7rem;
+  border: 1px solid var(--border-light);
+  font-family: var(--font-base);
+  background: #FAFBFC;
+  border-radius: 3px;
+  font-size: 1rem;
+}
+
+input[type="file"] {
+  font-family: var(--font-base);
+  font-size: 0.9rem;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+small {
+  display: block;
+  color: var(--secondary-gray);
+  font-size: 0.8rem;
+  margin-top: 0.2rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.btn-group {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.btn-sms {
+  margin-top: 0.5rem;
+}
+
+.sms-input {
+  margin-top: 0.5rem;
+}
+
+.form-result {
+  margin-top: 0;
+  font-weight: 600;
+  border-radius: 3px;
+}
+
+.form-result:not(:empty) {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #F0FFF4;
+  border: 1px solid var(--safe-green);
+  color: var(--safe-green);
+}
+
+.error-msg {
+  color: var(--alert-red);
+  font-size: 0.8rem;
+  margin-top: 0.2rem;
+  display: none;
+}
+
+.input-error {
+  border-color: var(--alert-red) !important;
+  background: #FFF5F5 !important;
+}
+
+/* ЧЕКБОКСЫ */
+.custom-checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  margin-bottom: 0.8rem;
+  cursor: pointer;
+  font-weight: 400;
+  position: relative;
+  padding-left: 0;
+}
+
+.custom-checkbox input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.checkmark {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--secondary-gray);
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-white);
+  transition: all 0.15s;
+  margin-top: 1px;
+}
+
+.checkmark svg {
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+
+.custom-checkbox input:checked ~ .checkmark {
+  background: var(--primary-navy);
+  border-color: var(--primary-navy);
+}
+
+.custom-checkbox input:checked ~ .checkmark svg {
+  opacity: 1;
+}
+
+.checkbox-text {
+  font-size: 0.9rem;
+  color: var(--text-medium);
+  line-height: 1.4;
+  user-select: none;
+}
+
+/* ТАБЛИЦЫ */
+.table-wrapper {
+  overflow-x: auto;
+  margin-bottom: 1rem;
+}
+
+.table-note {
+  font-size: 0.85rem;
+  color: var(--secondary-gray);
+  font-style: italic;
+  margin-top: 0.8rem;
+}
+
+/* ПОЛИТИКА */
+.policy-block {
+  line-height: 1.7;
+}
+
+.policy-block p {
+  font-size: 0.95rem;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+}
+
+.policy-block h3 {
+  font-size: 1.05rem;
+  color: var(--primary-navy);
+  margin: 1.5rem 0 0.8rem 0;
+}
+
+.policy-block ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.policy-block ul li {
+  font-size: 0.9rem;
+  color: var(--text-dark);
+  line-height: 1.6;
+  margin-bottom: 0.4rem;
+}
+
+.section-intro {
+  font-size: 0.9rem;
+  color: var(--secondary-gray);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+/* ЯКОРЯ */
+section[id] {
+  scroll-margin-top: 70px;
+}

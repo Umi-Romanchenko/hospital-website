@@ -1,0 +1,306 @@
+/* home.css — главная страница */
+
+/* ГЕРО-БАННЕР */
+.hero-banner {
+  background: linear-gradient(135deg, var(--primary-navy) 0%, #2A4365 100%);
+  color: white;
+  padding: 2.5rem;
+  margin-bottom: 2rem;
+  border-radius: 4px;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.hero-text h2 {
+  color: white;
+  border-bottom: none;
+  margin-bottom: 0.8rem;
+  font-size: 1.6rem;
+}
+
+.hero-text p {
+  opacity: 0.9;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: white;
+}
+
+.btn-hero {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: 3px;
+  text-align: center;
+  background: white;
+  color: var(--alert-red);
+  border: none;
+  transition: opacity 0.2s;
+  cursor: pointer;
+}
+
+.btn-hero:hover {
+  opacity: 0.9;
+}
+
+.hero-image {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  flex-shrink: 0;
+  background: #2A4365;
+  border: 1px solid #4A5568;
+  border-radius: 4px;
+}
+
+/* ПРЕИМУЩЕСТВА */
+.advantages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.advantage-item {
+  border: 1px solid var(--border-light);
+  background: var(--bg-white);
+  overflow: hidden;
+}
+
+.advantage-img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  background: #E8ECF2;
+  display: block;
+}
+
+.advantage-text {
+  padding: 1.2rem;
+}
+
+.advantage-text h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.05rem;
+  color: var(--primary-navy);
+}
+
+.advantage-text p {
+  font-size: 0.9rem;
+  color: var(--secondary-gray);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* НАПРАВЛЕНИЯ */
+.directions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 1.2rem;
+}
+
+.direction-card {
+  border: 1px solid var(--border-light);
+  text-decoration: none;
+  color: var(--text-dark);
+  background: var(--bg-white);
+  transition: all 0.2s;
+  overflow: hidden;
+  display: block;
+}
+
+.direction-card:hover {
+  border-color: var(--primary-navy);
+  box-shadow: var(--shadow-md);
+}
+
+.direction-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  background: #E8ECF2;
+  border-bottom: 1px solid var(--border-light);
+  display: block;
+}
+
+.direction-text {
+  padding: 1.2rem;
+}
+
+.direction-text h3 {
+  margin: 0 0 0.4rem 0;
+  color: var(--primary-navy);
+  font-size: 1.05rem;
+}
+
+.direction-text p {
+  font-size: 0.9rem;
+  color: var(--secondary-gray);
+  line-height: 1.5;
+  margin-bottom: 0.8rem;
+}
+
+.direction-link-text {
+  color: var(--primary-navy);
+  font-weight: 600;
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+}
+
+.direction-link-text::after {
+  content: '→';
+  margin-left: 0.5rem;
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+.direction-card:hover .direction-link-text {
+  color: var(--secondary-gray);
+}
+
+.direction-card:hover .direction-link-text::after {
+  transform: translateX(6px);
+}
+
+/* ИНФОКАРТЫ (Пациентам и посетителям) */
+.info-cards-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.info-card {
+  border: 1px solid var(--border-light);
+  background: var(--bg-white);
+  overflow: hidden;
+}
+
+.info-card-img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  background: #E8ECF2;
+  border-bottom: 1px solid var(--border-light);
+  display: block;
+}
+
+.info-card-body {
+  padding: 1.2rem;
+}
+
+.info-card h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1rem;
+  color: var(--primary-navy);
+}
+
+.info-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.info-card ul li {
+  margin-bottom: 0;
+}
+
+/* Главное изменение: ссылки выглядят как ссылки */
+.info-card ul li a {
+  display: block;
+  text-decoration: none;
+  color: var(--primary-navy);                /* синий цвет, как у гиперссылок */
+  font-weight: 500;
+  padding: 0.5rem 0.8rem;
+  border-left: 3px solid transparent;
+  transition: all 0.2s;
+}
+
+.info-card ul li a:hover {
+  color: #0d1b2a;
+  background: #F0F4FA;
+  border-left-color: var(--primary-navy);
+  border-bottom-color: var(--primary-navy);
+}
+
+/* FAQ */
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.faq-item {
+  border: 1px solid var(--border-light);
+}
+
+.faq-question {
+  width: 100%;
+  text-align: left;
+  padding: 1rem 1.2rem;
+  background: #FAFBFC;
+  border: none;
+  font-family: var(--font-base);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--primary-navy);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.2s;
+  line-height: 1.4;
+}
+
+.faq-question:hover {
+  background: #F0F4FA;
+}
+
+.faq-question::after {
+  content: '+';
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: var(--secondary-gray);
+  margin-left: 1rem;
+  flex-shrink: 0;
+}
+
+.faq-item.active .faq-question::after {
+  content: '\2212';
+}
+
+.faq-answer {
+  display: none;
+  padding: 1.2rem;
+  color: var(--text-medium);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.faq-answer p:first-child {
+  margin-top: 0;
+}
+
+.faq-item.active .faq-answer {
+  display: block;
+}
+
+/* БЛОК ЗАПИСИ НА ГЛАВНОЙ */
+.appointment-promo {
+  border: 2px solid var(--primary-navy);
+  background: #FAFBFC;
+  padding: 2rem;
+  text-align: center;
+}
+
+.appointment-promo h2 {
+  border-bottom: none;
+  margin-bottom: 0.8rem;
+}
+
+.appointment-promo p {
+  font-size: 0.95rem;
+  color: var(--secondary-gray);
+  margin-bottom: 1.5rem;
+}

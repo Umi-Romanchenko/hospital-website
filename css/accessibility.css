@@ -1,0 +1,63 @@
+.accessibility-bar {
+  background: #E2E8F0;
+  padding: 0.5rem 1.5rem;
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  border-bottom: 1px solid var(--border-light);
+  font-size: 0.85rem;
+}
+
+.accessibility-label {
+  color: var(--text-medium);
+  font-weight: 500;
+  margin-right: 0.5rem;
+}
+
+.access-btn {
+  background: var(--bg-white);
+  border: 1px solid var(--secondary-gray);
+  padding: 0.35rem 0.8rem;
+  cursor: pointer;
+  font-family: var(--font-base);
+  color: var(--text-dark);
+  border-radius: 3px;
+  font-size: 0.85rem;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+
+.access-btn:hover {
+  background: #EDF2F7;
+}
+
+.access-btn.active {
+  background: var(--primary-navy);
+  color: white;
+  border-color: var(--primary-navy);
+}
+
+/* Размеры шрифта через CSS-переменную */
+.font-large {
+  --base-font-size: 18px;
+}
+
+.font-xl {
+  --base-font-size: 22px;
+}
+
+/* Высокий контраст */
+body.high-contrast {
+  --primary-navy: #000000;
+  --secondary-gray: #000000;
+  --bg-white: #FFFFFF;
+  --bg-light: #FFFFFF;
+  --border-light: #000000;
+  --text-dark: #000000;
+  --text-medium: #000000;
+  --alert-red: #FF0000;
+  --safe-green: #006400;
+  filter: grayscale(100%) !important;
+}

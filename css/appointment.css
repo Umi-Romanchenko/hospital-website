@@ -1,0 +1,310 @@
+/* appointment.css — стили страницы "Запись и сервисы" с улучшенным адаптивом формы */
+
+/* Защита от выхода за экран */
+.content,
+.card,
+.services-grid,
+.service-card,
+.agreement-block,
+.steps-horizontal,
+.step-item,
+.wizard-step,
+.form-row {
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  min-width: 0;
+}
+
+/* Карточки сервисов */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.service-card {
+  border: 1px solid var(--border-light);
+  text-decoration: none;
+  color: var(--text-dark);
+  background: var(--bg-white);
+  transition: all 0.2s;
+  overflow: hidden;
+  display: block;
+}
+
+.service-card:hover {
+  border-color: var(--primary-navy);
+  box-shadow: var(--shadow-md);
+}
+
+.service-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  background: #E8ECF2;
+  border-bottom: 1px solid var(--border-light);
+  display: block;
+}
+
+.service-content {
+  padding: 1.2rem 1.2rem 1.5rem;
+}
+
+.service-content h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.05rem;
+  color: var(--primary-navy);
+}
+
+.service-content p {
+  font-size: 0.9rem;
+  color: var(--secondary-gray);
+  margin-bottom: 0.8rem;
+}
+
+.service-link {
+  color: var(--primary-navy);
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+/* Блок соглашений */
+.agreement-block {
+  margin: 1.5rem 0;
+  padding: 1.2rem;
+  background: #FAFBFC;
+  border: 1px solid var(--border-light);
+  border-radius: 3px;
+}
+
+/* Шаги */
+.steps-horizontal {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.step-item {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  border: 1px solid var(--border-light);
+  background: #FAFBFC;
+}
+
+.step-number {
+  width: 36px;
+  height: 36px;
+  background: var(--primary-navy);
+  color: white;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border-radius: 50%;
+  margin: 0 auto 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.step-item h3 {
+  margin: 0 0 0.5rem;
+  font-size: 0.95rem;
+  color: var(--primary-navy);
+}
+
+.step-item p {
+  font-size: 0.85rem;
+  color: var(--secondary-gray);
+  line-height: 1.4;
+}
+
+/* Подзаголовок формы */
+.form-subtitle {
+  margin-bottom: 1rem;
+  color: var(--secondary-gray);
+  font-size: 1rem;
+}
+
+/* Улучшаем форму */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 0.3rem;
+  color: var(--text-medium);
+}
+
+input[type="text"],
+input[type="date"],
+input[type="tel"],
+input[type="email"],
+select,
+textarea {
+  width: 100%;
+  padding: 0.7rem;
+  border: 1px solid var(--border-light);
+  font-family: var(--font-base);
+  background: #FAFBFC;
+  border-radius: 3px;
+  font-size: 1rem;
+}
+
+input[type="file"] {
+  font-family: var(--font-base);
+  font-size: 0.9rem;
+}
+
+small {
+  display: block;
+  color: var(--secondary-gray);
+  font-size: 0.8rem;
+  margin-top: 0.2rem;
+}
+
+.error-msg {
+  color: var(--alert-red);
+  font-size: 0.8rem;
+  margin-top: 0.2rem;
+  display: none;
+}
+
+.btn-group {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.btn-sms {
+  margin-top: 0.5rem;
+}
+
+.sms-input {
+  margin-top: 0.5rem;
+  width: 100%;
+}
+
+/* Адаптив */
+@media (max-width: 992px) {
+  .services-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  /* Сервисы и шаги */
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  .service-image {
+    height: 150px;
+  }
+  .steps-horizontal {
+    grid-template-columns: 1fr;
+  }
+
+  /* Форма: ключевые изменения */
+  .form-row {
+    grid-template-columns: 1fr;      /* превращаем две колонки в одну */
+    gap: 0.8rem;
+  }
+  .btn-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .service-content {
+    padding: 1rem;
+  }
+  .agreement-block {
+    padding: 1rem;
+  }
+  label {
+    font-size: 0.85rem;
+  }
+  input[type="text"],
+  input[type="date"],
+  input[type="tel"],
+  input[type="email"],
+  select,
+  textarea {
+    padding: 0.6rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .service-image {
+    height: 130px;
+  }
+  .step-item {
+    padding: 1rem 0.8rem;
+  }
+  .step-number {
+    width: 30px;
+    height: 30px;
+    font-size: 1rem;
+  }
+  .form-row {
+    gap: 0.6rem;
+  }
+  .btn {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .service-image {
+    height: 120px;
+  }
+  .agreement-block {
+    padding: 0.8rem;
+  }
+  .form-subtitle {
+    font-size: 0.9rem;
+  }
+  input[type="text"],
+  input[type="date"],
+  input[type="tel"],
+  input[type="email"],
+  select,
+  textarea {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+  label {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .service-image {
+    height: 100px;
+  }
+  .service-content h3 {
+    font-size: 0.95rem;
+  }
+  .service-content p {
+    font-size: 0.8rem;
+  }
+  .step-number {
+    width: 28px;
+    height: 28px;
+    font-size: 0.9rem;
+  }
+  .btn {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.85rem;
+  }
+  .custom-checkbox .checkbox-text {
+    font-size: 0.8rem;
+  }
+}
