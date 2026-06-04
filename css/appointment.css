@@ -1,4 +1,4 @@
-/* appointment.css — стили страницы "Запись и сервисы" с улучшенным адаптивом формы */
+/* appointment.css — стили страницы "Запись и сервисы" с улучшенными ссылками-кнопками */
 
 /* Защита от выхода за экран */
 .content,
@@ -63,10 +63,27 @@
   margin-bottom: 0.8rem;
 }
 
+/* Ссылка-кнопка с анимацией стрелки */
 .service-link {
   color: var(--primary-navy);
   font-weight: 600;
   font-size: 0.85rem;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.service-link::after {
+  content: ' →';
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+.service-card:hover .service-link {
+  color: var(--secondary-gray);
+}
+
+.service-card:hover .service-link::after {
+  transform: translateX(6px);
 }
 
 /* Блок соглашений */
@@ -200,7 +217,6 @@ small {
 }
 
 @media (max-width: 768px) {
-  /* Сервисы и шаги */
   .services-grid {
     grid-template-columns: 1fr;
   }
@@ -211,9 +227,8 @@ small {
     grid-template-columns: 1fr;
   }
 
-  /* Форма: ключевые изменения */
   .form-row {
-    grid-template-columns: 1fr;      /* превращаем две колонки в одну */
+    grid-template-columns: 1fr;
     gap: 0.8rem;
   }
   .btn-group {
