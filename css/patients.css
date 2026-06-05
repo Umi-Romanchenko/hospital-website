@@ -1,6 +1,3 @@
-/* patients.css — стили страницы "Пациентам и посетителям" с адаптивом */
-
-/* Защита от выхода за экран */
 .content,
 .card,
 .info-block,
@@ -17,7 +14,6 @@
   overflow: hidden;
 }
 
-/* Информационные блоки с картинкой */
 .info-block {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -52,7 +48,6 @@
   line-height: 1.7;
 }
 
-/* Правила */
 .rules-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -82,7 +77,6 @@
   margin-bottom: 0.4rem;
 }
 
-/* Чеклисты */
 .checklist-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
@@ -159,7 +153,6 @@
   border-top: 1px solid var(--border-light);
 }
 
-/* Права и обязанности */
 .rights-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -189,7 +182,6 @@
   margin-bottom: 0.4rem;
 }
 
-/* Диеты */
 .diet-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -212,12 +204,11 @@
   font-size: 0.85rem;
 }
 
-/* Адаптивные правки (основное уже в responsive.css, здесь только специфика) */
 @media (max-width: 768px) {
   .info-block,
   .info-block.reverse {
     grid-template-columns: 1fr;
-    direction: ltr;                 /* убираем reverse */
+    direction: ltr;
   }
   .info-image {
     height: 200px;

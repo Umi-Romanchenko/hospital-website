@@ -39,7 +39,6 @@
   border-color: var(--primary-navy);
 }
 
-/* Размеры шрифта через CSS-переменную */
 .font-large {
   --base-font-size: 18px;
 }
@@ -48,7 +47,6 @@
   --base-font-size: 22px;
 }
 
-/* Высокий контраст */
 body.high-contrast {
   --primary-navy: #000000;
   --secondary-gray: #000000;

@@ -1,4 +1,3 @@
-/* ========== БОЛЬШИЕ НОУТБУКИ (1200–1440px) ========== */
 @media (min-width: 1200px) and (max-width: 1440px) {
   .header {
     padding: 1.2rem 1.5rem;
@@ -28,7 +27,6 @@
   }
 }
 
-/* ========== ПЛАНШЕТЫ (≤1200px) ========== */
 @media (max-width: 1200px) {
   .grid-layout {
     grid-template-columns: 1fr 250px;
@@ -45,7 +43,6 @@
   }
 }
 
-/* ========== МАЛЕНЬКИЕ ПЛАНШЕТЫ (≤992px) ========== */
 @media (max-width: 992px) {
   .header {
     padding: 1rem;
@@ -91,13 +88,10 @@
   }
 }
 
-/* ========== ТЕЛЕФОНЫ (≤768px) – шапка+меню вместе sticky ========== */
 @media (max-width: 768px) {
   body {
     overflow-x: hidden;
   }
-
-  /* Отменяем display: contents, чтобы обёртка работала как обычный блок */
   .header-nav-wrapper {
     display: block;
     position: sticky;
@@ -106,7 +100,6 @@
     background: var(--bg-white);
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
   }
-
   .header {
     padding: 0.6rem 1rem;
     flex-wrap: nowrap;
@@ -134,15 +127,12 @@
     display: flex;
     margin-left: auto;
   }
-
-  /* Убираем sticky с самой nav, теперь она абсолютна внутри обёртки */
   nav {
     position: static;
     border-bottom: none;
     background: transparent;
     box-shadow: none;
   }
-
   #mainNav {
     position: absolute;
     top: 100%;
@@ -173,11 +163,9 @@
   .nav-link:last-child {
     border-bottom: none;
   }
-
   main {
     padding: 0 1rem;
   }
-
   .hero-banner {
     padding: 1rem;
   }
@@ -190,7 +178,6 @@
   .hero-image {
     height: 160px;
   }
-
   .directions-grid,
   .info-cards-row,
   .advantages-grid,
@@ -208,7 +195,6 @@
   .works-grid {
     grid-template-columns: 1fr;
   }
-
   .card {
     padding: 0.8rem;
   }
@@ -222,7 +208,6 @@
   .sidebar .card h3 {
     margin-top: 0;
   }
-
   .advantage-img,
   .direction-img {
     height: 140px;
@@ -230,12 +215,10 @@
   .info-card-img {
     height: 120px;
   }
-
   .btn-group {
     flex-direction: column;
     align-items: stretch;
   }
-
   .footer-grid {
     grid-template-columns: 1fr;
     text-align: center;
@@ -243,7 +226,6 @@
   .footer-bottom {
     margin-top: 1rem;
   }
-
   .accessibility-bar {
     justify-content: center;
     font-size: 0.7rem;
@@ -253,14 +235,12 @@
     padding: 0.25rem 0.5rem;
     font-size: 0.7rem;
   }
-
   .form-row {
     grid-template-columns: 1fr;
     gap: 0.8rem;
   }
 }
 
-/* ========== МАЛЕНЬКИЕ ТЕЛЕФОНЫ (≤576px) ========== */
 @media (max-width: 576px) {
   .header {
     padding: 0.5rem 0.8rem;
@@ -317,7 +297,6 @@
   }
 }
 
-/* ========== ОЧЕНЬ МАЛЕНЬКИЕ ЭКРАНЫ (≤480px) ========== */
 @media (max-width: 480px) {
   body {
     overflow-x: hidden;
@@ -355,7 +334,6 @@
     padding: 0.5rem 1rem;
     font-size: 0.85rem;
   }
-
   .card,
   .direction-card,
   .info-card,
@@ -382,7 +360,6 @@
     word-break: break-word;
     box-sizing: border-box;
   }
-
   img,
   .hero-image,
   .department-header-img,
@@ -399,7 +376,6 @@
     max-width: 100%;
     height: auto;
   }
-
   .table-wrapper {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
@@ -414,13 +390,11 @@
     display: block;
     overflow-x: auto;
   }
-
   .sidebar .card h3 {
     margin-top: 0;
   }
 }
 
-/* ========== 320px ========== */
 @media (max-width: 320px) {
   :root {
     --base-font-size: 14px;

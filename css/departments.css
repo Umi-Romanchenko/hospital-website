@@ -1,6 +1,3 @@
-/* departments.css — стили страницы "Отделения" с адаптивом */
-
-/* Защита от выхода за экран */
 .content,
 .card,
 .department-card,
@@ -87,7 +84,6 @@
   margin-bottom: 0.5rem;
 }
 
-/* Адаптивные высоты для изображений отделений */
 @media (max-width: 992px) {
   .department-header {
     grid-template-columns: 1fr;

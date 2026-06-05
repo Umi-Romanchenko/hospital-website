@@ -1,6 +1,3 @@
-/* appointment.css — стили страницы "Запись и сервисы" с улучшенными ссылками-кнопками */
-
-/* Защита от выхода за экран */
 .content,
 .card,
 .services-grid,
@@ -16,7 +13,6 @@
   min-width: 0;
 }
 
-/* Карточки сервисов */
 .services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -63,7 +59,6 @@
   margin-bottom: 0.8rem;
 }
 
-/* Ссылка-кнопка с анимацией стрелки */
 .service-link {
   color: var(--primary-navy);
   font-weight: 600;
@@ -86,7 +81,6 @@
   transform: translateX(6px);
 }
 
-/* Блок соглашений */
 .agreement-block {
   margin: 1.5rem 0;
   padding: 1.2rem;
@@ -95,7 +89,6 @@
   border-radius: 3px;
 }
 
-/* Шаги */
 .steps-horizontal {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -135,14 +128,12 @@
   line-height: 1.4;
 }
 
-/* Подзаголовок формы */
 .form-subtitle {
   margin-bottom: 1rem;
   color: var(--secondary-gray);
   font-size: 1rem;
 }
 
-/* Улучшаем форму */
 .form-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -209,7 +200,6 @@ small {
   width: 100%;
 }
 
-/* Адаптив */
 @media (max-width: 992px) {
   .services-grid {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -226,7 +216,6 @@ small {
   .steps-horizontal {
     grid-template-columns: 1fr;
   }
-
   .form-row {
     grid-template-columns: 1fr;
     gap: 0.8rem;

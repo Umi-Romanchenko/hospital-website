@@ -1,6 +1,3 @@
-/* home.css — главная страница */
-
-/* ГЕРО-БАННЕР */
 .hero-banner {
   background: linear-gradient(135deg, var(--primary-navy) 0%, #2A4365 100%);
   color: white;
@@ -56,7 +53,6 @@
   border-radius: 4px;
 }
 
-/* ПРЕИМУЩЕСТВА */
 .advantages-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -94,7 +90,6 @@
   margin: 0;
 }
 
-/* НАПРАВЛЕНИЯ */
 .directions-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -164,7 +159,6 @@
   transform: translateX(6px);
 }
 
-/* ИНФОКАРТЫ (Пациентам и посетителям) */
 .info-cards-row {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -206,11 +200,10 @@
   margin-bottom: 0;
 }
 
-/* Главное изменение: ссылки выглядят как ссылки */
 .info-card ul li a {
   display: block;
   text-decoration: none;
-  color: var(--primary-navy);                /* синий цвет, как у гиперссылок */
+  color: var(--primary-navy);
   font-weight: 500;
   padding: 0.5rem 0.8rem;
   border-left: 3px solid transparent;
@@ -221,10 +214,8 @@
   color: #0d1b2a;
   background: #F0F4FA;
   border-left-color: var(--primary-navy);
-  border-bottom-color: var(--primary-navy);
 }
 
-/* FAQ */
 .faq-list {
   display: flex;
   flex-direction: column;
@@ -286,7 +277,6 @@
   display: block;
 }
 
-/* БЛОК ЗАПИСИ НА ГЛАВНОЙ */
 .appointment-promo {
   border: 2px solid var(--primary-navy);
   background: #FAFBFC;
@@ -303,4 +293,20 @@
   font-size: 0.95rem;
   color: var(--secondary-gray);
   margin-bottom: 1.5rem;
+}
+
+.btn-view-all-wrapper {
+  text-align: center;
+  margin: 1.5rem 0 0;
+}
+
+.btn-view-all {
+  margin: 0;
+  display: inline-block;
+}
+
+@media (max-width: 768px) {
+  .btn-view-all-wrapper {
+    margin: 1rem 0 0.25rem;
+  }
 }

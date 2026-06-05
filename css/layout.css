@@ -1,9 +1,7 @@
-/* ========== ОБЁРТКА (display: contents на десктопе) ========== */
 .header-nav-wrapper {
   display: contents;
 }
 
-/* ========== ШАПКА ========== */
 .header {
   background: var(--bg-white);
   border-bottom: 3px solid var(--primary-navy);
@@ -67,7 +65,6 @@
   color: var(--secondary-gray);
 }
 
-/* ========== БУРГЕР ========== */
 .burger-btn {
   display: none;
   flex-direction: column;
@@ -102,7 +99,6 @@
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* ========== НАВИГАЦИЯ ========== */
 nav {
   background: var(--primary-navy);
   border-bottom: 3px solid #CBD5E0;
@@ -141,12 +137,10 @@ nav {
   background: rgba(255,255,255,0.05);
 }
 
-/* ========== САЙДБАР ========== */
 .sidebar .card {
   padding: 1.2rem;
 }
 
-/* Убираем верхний отступ у всех заголовков в сайдбаре */
 .sidebar .card h3 {
   margin-top: 0;
 }
@@ -175,7 +169,6 @@ nav {
   color: var(--text-medium);
 }
 
-/* ========== ПОДВАЛ ========== */
 footer {
   background: var(--primary-navy);
   color: #CBD5E0;

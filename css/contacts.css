@@ -1,13 +1,9 @@
-/* contacts.css — стили страницы "Контакты" с адаптивом */
-
-/* Защита */
 .content, .card, .contacts-main-grid, .transport-grid, .requisites-grid {
   max-width: 100%;
   box-sizing: border-box;
   overflow: hidden;
 }
 
-/* Контактная сетка */
 .contacts-main-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -62,7 +58,6 @@
   margin-top: 0.3rem;
 }
 
-/* Карта */
 .contact-map-column {
   display: flex;
   flex-direction: column;
@@ -102,7 +97,6 @@
   line-height: 1.4;
 }
 
-/* Транспорт */
 .transport-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -148,7 +142,6 @@
 }
 .transport-content ul li:last-child { border-bottom: none; }
 
-/* Реквизиты */
 .requisites-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -192,7 +185,6 @@
   margin-top: 1rem;
 }
 
-/* Таблица приёма */
 .reception-table {
   width: 100%;
   border-collapse: collapse;
@@ -224,7 +216,6 @@
   background: #FAFBFC;
 }
 
-/* Адаптив */
 @media (max-width: 768px) {
   .contacts-main-grid {
     grid-template-columns: 1fr;
